@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patient Health Outcome Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Patient Health Outcome Predictor</h1>
+    <p id="subtitle">Estimate a patient's risk from their profile and treatment details.</p>
+  </header>
+
+  <main>
+    <section id="notice" class="card hidden" role="alert"></section>
+
+    <form id="form" class="card hidden" novalidate>
+      <h2>Patient and treatment details</h2>
+      <div id="fields" class="grid"></div>
+      <button type="submit" id="submit">Predict</button>
+      <p id="error" class="error" role="alert"></p>
+    </form>
+
+    <section id="result" class="card hidden" aria-live="polite">
+      <h2 id="result-title">Prediction</h2>
+      <div class="summary">
+        <div class="prob"><span id="prob">0</span><small id="prob-caption"></small></div>
+        <div id="risk" class="badge">Risk</div>
+      </div>
+      <div class="bar"><div id="bar-fill"></div></div>
+      <p id="context" class="context"></p>
+      <ul id="warnings" class="warnings"></ul>
+
+      <h3>What influenced this result</h3>
+      <ul id="factors" class="factors"></ul>
+      <p class="note">Each bar shows how much that input moved the estimate compared with a typical patient (percentage points). Red raises the risk, green lowers it.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p id="model-info"></p>
+    <p><strong>Demo only.</strong> Not a medical device. Do not use for clinical decisions.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

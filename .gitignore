@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.myvenv/
+venv/
+.env
+.ipynb_checkpoints/
+# Raw datasets are large - download them again with the notebook
+notebook/data/*
+!notebook/data/README.md

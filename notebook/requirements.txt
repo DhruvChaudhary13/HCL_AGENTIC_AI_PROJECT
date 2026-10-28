@@ -1,0 +1,5 @@
+# Everything needed to run train_model.ipynb
+-r ../requirements.txt
+jupyterlab
+ipykernel
+matplotlib

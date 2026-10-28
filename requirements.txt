@@ -1,0 +1,8 @@
+# Web app. After training, pin scikit-learn to the exact version printed by
+# Step 12 of the notebook, e.g.  scikit-learn==1.5.2
+flask>=3.0,<4
+gunicorn>=22.0
+scikit-learn>=1.3
+pandas>=2.0
+numpy>=1.26
+joblib>=1.3
